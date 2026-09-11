@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="sv" data-theme="light">
+
+
+<head>
+    <meta name="viewport" content="width=device-width, minimum-scale=1, maximum-scale=1">
+    <meta charset="utf-8">
+    <title>Jokkmokks Energi AB</title>
+    <link rel="stylesheet" href="/style.css" />
+    <script src="/main.js"></script>
+</head>
+
+<body>
+    <template id="alert-link-template">
+        <a href="#alert" id="alert-link" data-tooltip="Aktuell driftinformation" data-placement="bottom"><svg
+                stroke-width="1.5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                    d="M20.0429 21H3.95705C2.41902 21 1.45658 19.3364 2.22324 18.0031L10.2662 4.01533C11.0352 2.67792 12.9648 2.67791 13.7338 4.01532L21.7768 18.0031C22.5434 19.3364 21.581 21 20.0429 21Z"
+                    stroke="currentColor" stroke-linecap="round" />
+                <path d="M12 9V13" stroke="currentColor" stroke-linecap="round" />
+                <path d="M12 17.01L12.01 16.9989" stroke="currentColor" stroke-linecap="round"
+                    stroke-linejoin="round" />
+            </svg></a>
+    </template>
+    <template id="alert-template">
+        <header id="alert">
+            <h2>Driftmeddelande</h2>
+            <div id="messages"></div>
+        </header>
+    </template>
+    <div id="top" style="z-index: 100001;">
+        <a href="#start">
+            <img src="/symbol.png" />
+        </a>
+    </div>
+    <div id="alert-pos"></div><div id="start"></div>
+    <header id="menu" style="z-index: 100000;">
+        <nav>
+            <ul>
+                <li><a href="/#start"><img class="desktop" src="/logo.png" /><img class="mobile" src="/symbol.png" /></a>
+                </li>
+            </ul>
+            <ul>
+                <li id="alert-menu-item"></li>
+                <li><a href="/#nyheter" role="button">Nyheter</a></li>
+                
+                <li><a href="/#0-tjanster" role="button">Tjänster</a></li>
+                
+                <li><a href="/#1-priser" role="button">Priser</a></li>
+                
+                <li><a href="/#kontakt" role="button">Kontakt</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    
+    <main id="content" style="text-align: center;">
+        
+
+
+
+<section>
+    <h1>En igelkott!</h1>
+    
+    <img src="https://images.unsplash.com/photo-1568431477192-52bb13a55088?w=500&amp;auto=format&amp;fit=crop&amp;q=60&amp;ixlib=rb-4.1.0&amp;ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8aGVkZ2Vob2d8ZW58MHx8MHx8fDA%3D"/>
+    
+    <p>Det var en gång en gång som grusades.</p>
+
+    <div style="min-height: 10vh;"></div>
+    <small>Publicerad 2021-02-13</small>
+    <hr />
+    <div class="grid">
+            
+    
+            
+                
+            
+                
+            
+                
+                
+                
+                <div>
+                    
+                    
+                    Nyare: <a href="https://jomiq.github.io/nyheter/alla-har-tagit-ledigt/">Alla har tagit ledigt</a>
+                    
+                </div>
+                <div><a href="/nyheter"><button>Arkiv</button></a></div>
+                <div>
+                Äldre: <a href="https://jomiq.github.io/nyheter/industrialiseringen-av-finland/">Industrialiseringen av Finland</a>
+                
+                </div>
+                
+            
+                
+            
+                
+            
+    </div>
+</section>
+    
+    </main>
+    <footer>
+        <small>&copy; Jokkmokks Energi AB 2026</small>
+        | <small id="footer-status"></small>
+    </footer>
+    <button class="debug-button" onclick="main()">Simulera driftmeddelande</button>
+    <!-- <script>main()</script> -->
+</body>
+
+</html>

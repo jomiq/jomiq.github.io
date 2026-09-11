@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="sv" data-theme="light">
+
+
+<head>
+    <meta name="viewport" content="width=device-width, minimum-scale=1, maximum-scale=1">
+    <meta charset="utf-8">
+    <title>Jokkmokks Energi AB</title>
+    <link rel="stylesheet" href="/style.css" />
+    <script src="/main.js"></script>
+</head>
+
+<body>
+    <template id="alert-link-template">
+        <a href="#alert" id="alert-link" data-tooltip="Aktuell driftinformation" data-placement="bottom"><svg
+                stroke-width="1.5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                    d="M20.0429 21H3.95705C2.41902 21 1.45658 19.3364 2.22324 18.0031L10.2662 4.01533C11.0352 2.67792 12.9648 2.67791 13.7338 4.01532L21.7768 18.0031C22.5434 19.3364 21.581 21 20.0429 21Z"
+                    stroke="currentColor" stroke-linecap="round" />
+                <path d="M12 9V13" stroke="currentColor" stroke-linecap="round" />
+                <path d="M12 17.01L12.01 16.9989" stroke="currentColor" stroke-linecap="round"
+                    stroke-linejoin="round" />
+            </svg></a>
+    </template>
+    <template id="alert-template">
+        <header id="alert">
+            <h2>Driftmeddelande</h2>
+            <div id="messages"></div>
+        </header>
+    </template>
+    <div id="top" style="z-index: 100001;">
+        <a href="#start">
+            <img src="/symbol.png" />
+        </a>
+    </div>
+    <div id="alert-pos"></div><div id="start"></div>
+    <header id="menu" style="z-index: 100000;">
+        <nav>
+            <ul>
+                <li><a href="/#start"><img class="desktop" src="/logo.png" /><img class="mobile" src="/symbol.png" /></a>
+                </li>
+            </ul>
+            <ul>
+                <li id="alert-menu-item"></li>
+                <li><a href="/#nyheter" role="button">Nyheter</a></li>
+                
+                <li><a href="/#0-tjanster" role="button">Tjänster</a></li>
+                
+                <li><a href="/#1-priser" role="button">Priser</a></li>
+                
+                <li><a href="/#kontakt" role="button">Kontakt</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+<div id="hero">
+    <div>
+        
+        <img src="logo_inv.png"/>
+        
+        <h2 id="vi-levererar-palitlig-energi-med-fokus-pa-kvalitet-miljo-och-lokal-utveckling">Vi levererar pålitlig energi med fokus på kvalitet, miljö och lokal utveckling</h2>
+
+    </div>
+</div>
+
+    <main id="content" style="text-align: center;">
+        
+<section id="nyheter">
+    
+    <h1>Nyheter</h1>
+    <img src="https://images.unsplash.com/vector-1741707326287-8bd045c823ed?q=80&w=772&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="drawing" width="200"/>
+<h2 id="jokkmokks-energi-har-en-ny-hemsida">Jokkmokks Energi har en ny hemsida!</h2>
+<p>Vi hoppas att du - kära besökare - finner den lättläst, informativ och snabbare än Tarzan.</p>
+<p>Byggd med <a rel="external" href="https://getzola.com">Zola</a>, en statisk sidgenerator skriven i <a rel="external" href="https://rust.org">Rust</a>.</p>
+<p>Layouten är baserad på <a rel="external" href="https://picocss.com">pico</a>.</p>
+
+    <hr />
+    <div class="grid">
+        
+         
+        <article style="height: fit-content">
+            <header>
+                <h2>
+                    <a href="https://jomiq.github.io/nyheter/alla-ar-tillbaka/">
+                        Alla är tillbaka
+                    </a>
+                </h2>
+            </header>
+            <main>
+                
+                
+                <p>Det är ingen som har råd att slappa längre.</p>
+
+                
+            </main>
+            <footer><small>2026-03-13</small></footer>
+            </article>
+            
+            
+         
+        <article style="height: fit-content">
+            <header>
+                <h2>
+                    <a href="https://jomiq.github.io/nyheter/alla-har-tagit-ledigt/">
+                        Alla har tagit ledigt
+                    </a>
+                </h2>
+            </header>
+            <main>
+                
+                
+                <p>Det är ingen som ids jobba längre.</p>
+
+                
+            </main>
+            <footer><small>2026-02-13</small></footer>
+            </article>
+            
+            
+         
+        <article style="height: fit-content">
+            <header>
+                <h2>
+                    <a href="https://jomiq.github.io/nyheter/en-igelkott/">
+                        En igelkott!
+                    </a>
+                </h2>
+            </header>
+            <main>
+                
+                <img src="https://images.unsplash.com/photo-1568431477192-52bb13a55088?w=500&amp;auto=format&amp;fit=crop&amp;q=60&amp;ixlib=rb-4.1.0&amp;ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8aGVkZ2Vob2d8ZW58MHx8MHx8fDA%3D"/>
+                
+                
+                <p>Det var en gång en gång som grusades.</p>
+
+                
+            </main>
+            <footer><small>2021-02-13</small></footer>
+            </article>
+            
+            
+        
+            
+    </div>
+    
+    <hr/>
+    <a href="/nyheter"><button>Äldre nyheter</button></a>
+    
+</section>
+
+</section>
+
+<section id="0-tjanster">
+    <h1>Tjänster</h1>
+    <p><img src="/icons/fire.svg" alt="" /></p>
+<h2 id="varme">Värme</h2>
+<p>Varje år levererar vi ca <strong>154 000 TWh</strong> värme till drygt 500 hushåll och företag i Jokkmokks kommun.</p>
+<p>Större delen av vår värmeproduktion kommer från egentillverkad träflis, men vi använder även träpellets och olja.</p>
+<hr>
+<p><img src="/icons/tool.svg" alt="" /></p>
+<h2 id="service">Service</h2>
+<p>Jokkmokks Energi har kunnig personal som gärna hjälper till att felsöka, reparera och optimera din fjärrvärmeanläggning.</p>
+<p><strong>Vi har de flesta reservdelar i lager!</strong></p>
+<hr>
+<p><img src="/icons/safe.svg" alt="" /></p>
+<h2 id="trygghetsavtal">Trygghetsavtal</h2>
+<p>Ett trygghetsavtal innebär att vi årligen inspekterar och servar din fjärrvärmeanläggning för att förhindra problem innan de uppstår. I trygghetsavtalet ingår även felsökning, rådgivning och reparationsarbete; du betalar bara för reservdelar och material.</p>
+<p><strong>Med trygghetsavtal kan du känna dig lugn och låta oss att ta hand om din fjärrvärmeanläggning!</strong></p>
+<hr>
+<p><img src="/icons/connect.svg" alt="" /></p>
+<h2 id="anslut-dig">Anslut dig</h2>
+<p>Vill du ansluta din fastighet till oss?</p>
+<p>Att ansluta din fastighet till fjärrvärmenätet är enkelt, <a href="/sidor/nyanslutning">läs mer här</a> eller <a href="/#kontakt">kontakta oss</a> så berättar vi mer!</p>
+
+</section>
+
+<section id="1-priser">
+    <h1>Priser</h1>
+    <h2 id="fjarrvarme">Fjärrvärme</h2>
+<p>Taxan för fjärrvärme är <strong>0,91 kr/kWh</strong> plus en fast årsavgift enligt följande tabell:</p>
+<table><thead><tr><th>#</th><th>Årsförbrukning (kWh)</th><th>Årsavgift</th></tr></thead><tbody>
+<tr><td>1</td><td>upp till 16000</td><td>5 179 kr</td></tr>
+<tr><td>2</td><td>16000 - 24999</td><td>7 075 kr</td></tr>
+<tr><td>3</td><td>25000 - 29999</td><td>9 277 kr</td></tr>
+<tr><td>4</td><td>30000 - 49999</td><td>11 098 k</td></tr>
+<tr><td>5</td><td>50000 eller mer</td><td>17 156 k</td></tr>
+</tbody></table>
+<p>Fjärrvärrme faktureras månadsvis eller kvartalsvis, enligt överenskommelse.</p>
+<hr>
+<h2 id="trygghetsavtal">Trygghetsavtal</h2>
+<p>Trygghetsavtalet kostar <strong>60 miljoner/år</strong> och faktureras varannan fullmåne.</p>
+<hr>
+<h2 id="anslutning">Anslutning</h2>
+<p>Anslutningsavgiften är <strong>120 000 kr</strong>. I detta ingår grävning fram till tomtgränsen men inte fjärrvärmecenttral eller en cool t-shirt.</p>
+
+</section>
+
+<section id="kontakt">
+    <h1>Kontakt</h1>
+    <div class="grid">
+        <div>
+            <h2>Besöksadress</h2>
+            <p>Industivägen 27, Jokkmokk</p>
+        </div>
+        <div>
+        <h2>Telefon</h2>
+        <p>070-123 45 67</p>
+        </div>
+        <div>
+
+            <h2>E-post</h2>
+            <p><a href="mailto:info@jokkmokksenergi.se">info@jokkmokksenergi.se</a></p>
+        </div>
+    </div>
+    <hr />
+    <h2>Kontaktformulär</h2>
+    <form style="padding-bottom: 8rem;">
+        <fieldset>
+            <label>
+                Namn
+                <input name="first_name" placeholder="Namn" autocomplete="given-name" />
+            </label>
+            <label>
+                Email
+                <input type="email" name="email" placeholder="Email" autocomplete="email" />
+            </label>
+            <label>
+                Meddelande
+                <textarea name="message" placeholder="Meddelande" aria-label="Professional short bio"></textarea>
+            </label>
+        </fieldset>
+        <input type="submit" value="Skicka" />
+    </form>
+</section>
+
+    </main>
+    <footer>
+        <small>&copy; Jokkmokks Energi AB 2026</small>
+        | <small id="footer-status"></small>
+    </footer>
+    <button class="debug-button" onclick="main()">Simulera driftmeddelande</button>
+    <!-- <script>main()</script> -->
+</body>
+
+</html>
