@@ -1,5 +1,5 @@
 async function getStatus() {
-  const url = "http://localhost:1111/status.json";
+  const url = "https:/jomiq.github.io/status.json";
   try {
     const response = await fetch(url);
     if (!response.ok) {
