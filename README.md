@@ -1,1 +1,0 @@
-# jomiq.github.io

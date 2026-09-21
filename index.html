@@ -5,39 +5,55 @@
 <head>
     <meta name="viewport" content="width=device-width, minimum-scale=1, maximum-scale=1">
     <meta charset="utf-8">
-    <title>Jokkmokks Energi AB</title>
+    <title> Jokkmokks Energi AB</title>
     <link rel="stylesheet" href="/style.css" />
-    <script src="/main.js"></script>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.2/src/light/style.css"
+    />
+    <script src="/serviceAlert.js"></script>
+    
+<script src="/modal.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+<script type="text/javascript">
+    (function() {
+        // https://dashboard.emailjs.com/admin/account
+        emailjs.init({
+            publicKey: "YOUR_PUBLIC_KEY",
+        });
+    })();
+</script>
+<script type="text/javascript">
+    window.onload = function() {
+        document.getElementById('contact-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+            // these IDs from the previous steps
+            emailjs.sendForm('contact_service', 'contact_form', this)
+                .then(() => {
+                    console.log('SUCCESS!');
+                }, (error) => {
+                    console.log('FAILED...', error);
+                });
+        });
+    }
+</script>
+
 </head>
 
 <body>
-    <template id="alert-link-template">
-        <a href="#alert" id="alert-link" data-tooltip="Aktuell driftinformation" data-placement="bottom"><svg
-                stroke-width="1.5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path
-                    d="M20.0429 21H3.95705C2.41902 21 1.45658 19.3364 2.22324 18.0031L10.2662 4.01533C11.0352 2.67792 12.9648 2.67791 13.7338 4.01532L21.7768 18.0031C22.5434 19.3364 21.581 21 20.0429 21Z"
-                    stroke="currentColor" stroke-linecap="round" />
-                <path d="M12 9V13" stroke="currentColor" stroke-linecap="round" />
-                <path d="M12 17.01L12.01 16.9989" stroke="currentColor" stroke-linecap="round"
-                    stroke-linejoin="round" />
-            </svg></a>
-    </template>
     <template id="alert-template">
         <header id="alert">
-            <h2>Driftmeddelande</h2>
-            <div id="messages"></div>
+            <details id="messages"><summary role="button"><i class="icon-warning-light"></i> Driftmeddelanden</summary></details>
         </header>
     </template>
-    <div id="top" style="z-index: 100001;">
-        <a href="#start">
-            <img src="/symbol.png" />
-        </a>
-    </div>
-    <div id="alert-pos"></div><div id="start"></div>
-    <header id="menu" style="z-index: 100000;">
+    <div id="alert-pos"></div>
+    <div id="start"></div>
+    <header id="menu" style="z-index: 2;">
         <nav>
             <ul>
-                <li><a href="/#start"><img class="desktop" src="/logo.png" /><img class="mobile" src="/symbol.png" /></a>
+                <li><a href="/#start"><img class="desktop" src="/logo.png" /><img class="mobile"
+                            src="/symbol.png" /></a>
                 </li>
             </ul>
             <ul>
@@ -81,7 +97,7 @@
         <article style="height: fit-content">
             <header>
                 <h2>
-                    <a href="https://jomiq.github.io/nyheter/alla-ar-tillbaka/">
+                    <a href="https://jomiq.github.io/nyheter/alla-ar-tillbaka//#alla-ar-tillbaka">
                         Alla är tillbaka
                     </a>
                 </h2>
@@ -101,7 +117,7 @@
         <article style="height: fit-content">
             <header>
                 <h2>
-                    <a href="https://jomiq.github.io/nyheter/alla-har-tagit-ledigt/">
+                    <a href="https://jomiq.github.io/nyheter/alla-har-tagit-ledigt//#alla-har-tagit-ledigt">
                         Alla har tagit ledigt
                     </a>
                 </h2>
@@ -121,7 +137,7 @@
         <article style="height: fit-content">
             <header>
                 <h2>
-                    <a href="https://jomiq.github.io/nyheter/en-igelkott/">
+                    <a href="https://jomiq.github.io/nyheter/en-igelkott//#en-igelkott">
                         En igelkott!
                     </a>
                 </h2>
@@ -142,10 +158,12 @@
         
             
     </div>
-    
     <hr/>
-    <a href="/nyheter"><button>Äldre nyheter</button></a>
-    
+    <group><a role="button"><i class="status-indicator icon-warning-light"></i>Se aktuell driftinformation här</a>
+        
+        <a href="/nyheter" role="button">Äldre nyheter</a>
+        
+    </group>
 </section>
 
 </section>
@@ -214,7 +232,7 @@
     </div>
     <hr />
     <h2>Kontaktformulär</h2>
-    <form style="padding-bottom: 8rem;">
+    <form id="contact-form">
         <fieldset>
             <label>
                 Namn
@@ -226,20 +244,35 @@
             </label>
             <label>
                 Meddelande
-                <textarea name="message" placeholder="Meddelande" aria-label="Professional short bio"></textarea>
+                <textarea name="message" placeholder="Meddelande" aria-label="message"></textarea>
             </label>
         </fieldset>
         <input type="submit" value="Skicka" />
     </form>
+        <dialog id="email-result">
+        <article>
+            <h1>Hey</h1>
+            <footer><button data-target="email-confirm" onclick="toggleModal(event)">OK</button></footer>
+        </article>
+    </dialog>
 </section>
 
+        <div class="float-bottom">
+            <a href="#alert" id="alert-button" class="floating-button" role="link" data-tooltip="Driftmeddelanden" data-placement="left">
+                <i class="icon-warning-light"></i> 
+            </a>
+            <a href="#start" id="top-button" class="floating-button" data-tooltip="Till topps!" data-placement="left">
+                <i class="icon-angle-double-up"></i>
+            </a>
+        </div>
     </main>
     <footer>
         <small>&copy; Jokkmokks Energi AB 2026</small>
-        | <small id="footer-status"></small>
+        | <a href="/status"><small id="footer-status" aria-busy="true"></small></a>
+
     </footer>
-    <button class="debug-button" onclick="main()">Simulera driftmeddelande</button>
     <!-- <script>main()</script> -->
+
 </body>
 
 </html>
