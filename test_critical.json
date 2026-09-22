@@ -1,0 +1,51 @@
+[
+    {
+        "id": 221260,
+        "profileId": 5437,
+        "profileName": "Jokkmokks Energi AB",
+        "dateCreatedUtc": "2026-09-01T12:14:37Z",
+        "smsGroupId": 3150343,
+        "affectedAddressesCoordinates": [
+            {
+                "lat": 66.60115015682184,
+                "lng": 19.85794019605276
+            },
+            {
+                "lat": 66.601117462385,
+                "lng": 19.858354171320446
+            },
+            {
+                "lat": 66.60112328638749,
+                "lng": 19.85727513526276
+            },
+            {
+                "lat": 66.60115175639575,
+                "lng": 19.858196015274313
+            },
+            {
+                "lat": 66.6037074918825,
+                "lng": 19.852251692462378
+            },
+            {
+                "lat": 66.60114508914265,
+                "lng": 19.857666278269594
+            },
+            {
+                "lat": 66.60114555408663,
+                "lng": 19.857797164638434
+            },
+            {
+                "lat": 66.60115691572948,
+                "lng": 19.85830542799015
+            }
+        ],
+        "geoObjects": "[{\"type\":\"Feature\",\"properties\":{},\"geometry\":{\"type\":\"Point\",\"coordinates\":[19.852284,66.603736]}},{\"type\":\"Feature\",\"properties\":{},\"geometry\":{\"type\":\"Point\",\"coordinates\":[19.857203,66.601105]}},{\"type\":\"Feature\",\"properties\":{},\"geometry\":{\"type\":\"Point\",\"coordinates\":[19.857431,66.6011]}},{\"type\":\"Feature\",\"properties\":{},\"geometry\":{\"type\":\"Point\",\"coordinates\":[19.857665,66.601098]}},{\"type\":\"Feature\",\"properties\":{},\"geometry\":{\"type\":\"Point\",\"coordinates\":[19.857906,66.601085]}},{\"type\":\"Feature\",\"properties\":{},\"geometry\":{\"type\":\"Point\",\"coordinates\":[19.858115,66.601073]}},{\"type\":\"Feature\",\"properties\":{},\"geometry\":{\"type\":\"Point\",\"coordinates\":[19.858318,66.601076]}},{\"type\":\"Feature\",\"properties\":{},\"geometry\":{\"type\":\"Point\",\"coordinates\":[19.858466,66.601085]}}]",
+        "title": "Oplanerat fjärrvärmeavbrott",
+        "text": "<p>Oplanerat fjärrvärmeavbrott på grund av <strong>explosion</strong> mellan Nyborgsgatan och Industrivägen.</p><br /><p>Vi kommer att ta tag i problemet omedelbart, Tack för er förståelse.</p>",
+        "criticalStatus": true,
+        "completed": false,
+        "dateDelayUtc": "2026-09-01T12:10:00Z",
+        "dateExpireUtc": "2026-09-03T17:00:00Z",
+        "typeId": 1
+    }
+]

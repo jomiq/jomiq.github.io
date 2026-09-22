@@ -8,12 +8,8 @@
     <title>
 Arkiv - 
  Jokkmokks Energi AB</title>
+    <link rel="icon" type="image/png" href="/favicon.png">
     <link rel="stylesheet" href="/style.css" />
-    <link
-      rel="stylesheet"
-      type="text/css"
-      href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.2/src/light/style.css"
-    />
     <script src="/serviceAlert.js"></script>
     
     
@@ -22,7 +18,9 @@ Arkiv -
 <body>
     <template id="alert-template">
         <header id="alert">
-            <details id="messages"><summary role="button"><i class="icon-warning-light"></i> Driftmeddelanden</summary></details>
+            <details id="messages">
+                <summary role="button"><i class="icon-warning-light"></i> Driftmeddelanden</summary>
+            </details>
         </header>
     </template>
     <div id="alert-pos"></div>
@@ -38,9 +36,9 @@ Arkiv -
                 <li id="alert-menu-item"></li>
                 <li><a href="/#nyheter" role="button">Nyheter</a></li>
                 
-                <li><a href="/#0-tjanster" role="button">Tjänster</a></li>
+                <li><a href="/#tjanster" role="button">Tjänster</a></li>
                 
-                <li><a href="/#1-priser" role="button">Priser</a></li>
+                <li><a href="/#priser" role="button">Priser</a></li>
                 
                 <li><a href="/#kontakt" role="button">Kontakt</a></li>
             </ul>
@@ -54,61 +52,15 @@ Arkiv -
     <h1>Arkiv</h1>
     <table>
     
-        <thead>
-            <tr>
-                <th>2026</th>
-                <th></th>
-            </tr>
-        </thead>
-        
-        <tr>
-            <td><a href="https://jomiq.github.io/nyheter/alla-ar-tillbaka//#alla-ar-tillbaka">Alla är tillbaka</a></td>
-            <td style="text-align: right;">2026-03-13</td>
-        </tr>
-        
-        <tr>
-            <td><a href="https://jomiq.github.io/nyheter/alla-har-tagit-ledigt//#alla-har-tagit-ledigt">Alla har tagit ledigt</a></td>
-            <td style="text-align: right;">2026-02-13</td>
-        </tr>
-        
-        
-        <thead>
-            <tr>
-                <th>2018</th>
-                <th></th>
-            </tr>
-        </thead>
-        
-        <tr>
-            <td><a href="https://jomiq.github.io/nyheter/ny-hemsida//#ny-hemsida">Ny hemsida, jay!</a></td>
-            <td style="text-align: right;">2018-02-13</td>
-        </tr>
-        
-        
-        <thead>
-            <tr>
-                <th>2021</th>
-                <th></th>
-            </tr>
-        </thead>
-        
-        <tr>
-            <td><a href="https://jomiq.github.io/nyheter/en-igelkott//#en-igelkott">En igelkott!</a></td>
-            <td style="text-align: right;">2021-02-13</td>
-        </tr>
-        
-        <tr>
-            <td><a href="https://jomiq.github.io/nyheter/industrialiseringen-av-finland//#industrialiseringen-av-finland">Industrialiseringen av Finland</a></td>
-            <td style="text-align: right;">2021-02-10</td>
-        </tr>
-        
-        
     </table>
 </section>
 
+        
+        
         <div class="float-bottom">
-            <a href="#alert" id="alert-button" class="floating-button" role="link" data-tooltip="Driftmeddelanden" data-placement="left">
-                <i class="icon-warning-light"></i> 
+            <a href="#alert" id="alert-button" class="floating-button" role="link" data-tooltip="Driftmeddelanden"
+                data-placement="left">
+                <i class="icon-warning-light"></i>
             </a>
             <a href="#start" id="top-button" class="floating-button" data-tooltip="Till topps!" data-placement="left">
                 <i class="icon-angle-double-up"></i>
@@ -116,11 +68,13 @@ Arkiv -
         </div>
     </main>
     <footer>
-        <small>&copy; Jokkmokks Energi AB 2026</small>
-        | <a href="/status"><small id="footer-status" aria-busy="true"></small></a>
+        <small>&copy; Jokkmokks Energi AB 2026</small> | <small>Industivägen 27, Jokkmokk</small> |
+        <small>0971-17338</small> |
+        <small><a href="mailto:info@jokkmokksenergi.se">info@jokkmokksenergi.se</a></small> |
+        <a href="/status"><small id="footer-status" aria-busy="true"></small></a> 
 
     </footer>
-    <!-- <script>main()</script> -->
+    <script>servicealert_main()</script>
 
 </body>
 

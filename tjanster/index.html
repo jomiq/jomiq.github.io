@@ -8,21 +8,20 @@
     <title>
 Tjänster - 
  Jokkmokks Energi AB</title>
+    <link rel="icon" type="image/png" href="/favicon.png">
     <link rel="stylesheet" href="/style.css" />
-    <link
-      rel="stylesheet"
-      type="text/css"
-      href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.2/src/light/style.css"
-    />
     <script src="/serviceAlert.js"></script>
     
-    
+
+
 </head>
 
 <body>
     <template id="alert-template">
         <header id="alert">
-            <details id="messages"><summary role="button"><i class="icon-warning-light"></i> Driftmeddelanden</summary></details>
+            <details id="messages">
+                <summary role="button"><i class="icon-warning-light"></i> Driftmeddelanden</summary>
+            </details>
         </header>
     </template>
     <div id="alert-pos"></div>
@@ -38,9 +37,9 @@ Tjänster -
                 <li id="alert-menu-item"></li>
                 <li><a href="/#nyheter" role="button">Nyheter</a></li>
                 
-                <li><a href="/#0-tjanster" role="button">Tjänster</a></li>
+                <li><a href="/#tjanster" role="button">Tjänster</a></li>
                 
-                <li><a href="/#1-priser" role="button">Priser</a></li>
+                <li><a href="/#priser" role="button">Priser</a></li>
                 
                 <li><a href="/#kontakt" role="button">Kontakt</a></li>
             </ul>
@@ -51,12 +50,13 @@ Tjänster -
     <main id="content" style="text-align: center;">
         
 <section>
-    <p><img src="/icons/fire.svg" alt="" /></p>
+    <div style="text-align: left;">    
+        <h1 id=""><img src="/icons/fire.svg" alt="" /></h1>
 <h2 id="varme">Värme</h2>
 <p>Varje år levererar vi ca <strong>154 000 TWh</strong> värme till drygt 500 hushåll och företag i Jokkmokks kommun.</p>
 <p>Större delen av vår värmeproduktion kommer från egentillverkad träflis, men vi använder även träpellets och olja.</p>
 <hr>
-<p><img src="/icons/tool.svg" alt="" /></p>
+<h1 id="-1"><img src="/icons/tool.svg" alt="" /></h1>
 <h2 id="service">Service</h2>
 <p>Jokkmokks Energi har kunnig personal som gärna hjälper till att felsöka, reparera och optimera din fjärrvärmeanläggning.</p>
 <p><strong>Vi har de flesta reservdelar i lager!</strong></p>
@@ -69,14 +69,19 @@ Tjänster -
 <p><img src="/icons/connect.svg" alt="" /></p>
 <h2 id="anslut-dig">Anslut dig</h2>
 <p>Vill du ansluta din fastighet till oss?</p>
-<p>Att ansluta din fastighet till fjärrvärmenätet är enkelt, <a href="/sidor/nyanslutning">läs mer här</a> eller <a href="/#kontakt">kontakta oss</a> så berättar vi mer!</p>
+<p>Att ansluta din fastighet till fjärrvärmenätet är enkelt, <a href="/nyanslutning">läs mer här</a> eller <a href="/#kontakt">kontakta oss</a> så berättar vi mer!</p>
 
+    </div>
     <hr />
 </section>
 
+
+        
+        
         <div class="float-bottom">
-            <a href="#alert" id="alert-button" class="floating-button" role="link" data-tooltip="Driftmeddelanden" data-placement="left">
-                <i class="icon-warning-light"></i> 
+            <a href="#alert" id="alert-button" class="floating-button" role="link" data-tooltip="Driftmeddelanden"
+                data-placement="left">
+                <i class="icon-warning-light"></i>
             </a>
             <a href="#start" id="top-button" class="floating-button" data-tooltip="Till topps!" data-placement="left">
                 <i class="icon-angle-double-up"></i>
@@ -84,11 +89,13 @@ Tjänster -
         </div>
     </main>
     <footer>
-        <small>&copy; Jokkmokks Energi AB 2026</small>
-        | <a href="/status"><small id="footer-status" aria-busy="true"></small></a>
+        <small>&copy; Jokkmokks Energi AB 2026</small> | <small>Industivägen 27, Jokkmokk</small> |
+        <small>0971-17338</small> |
+        <small><a href="mailto:info@jokkmokksenergi.se">info@jokkmokksenergi.se</a></small> |
+        <a href="/status"><small id="footer-status" aria-busy="true"></small></a> 
 
     </footer>
-    <!-- <script>main()</script> -->
+    <script>servicealert_main()</script>
 
 </body>
 

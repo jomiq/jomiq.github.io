@@ -6,45 +6,54 @@
     <meta name="viewport" content="width=device-width, minimum-scale=1, maximum-scale=1">
     <meta charset="utf-8">
     <title> Jokkmokks Energi AB</title>
+    <link rel="icon" type="image/png" href="/favicon.png">
     <link rel="stylesheet" href="/style.css" />
-    <link
-      rel="stylesheet"
-      type="text/css"
-      href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.2/src/light/style.css"
-    />
     <script src="/serviceAlert.js"></script>
     
+
 <script src="/modal.js"></script>
 <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 <script type="text/javascript">
-    (function() {
+    (function () {
         // https://dashboard.emailjs.com/admin/account
         emailjs.init({
-            publicKey: "YOUR_PUBLIC_KEY",
+            publicKey: "PGxa1G5RMRfC2K90H",
+            //publicKey: "fail",
         });
     })();
 </script>
 <script type="text/javascript">
-    window.onload = function() {
-        document.getElementById('contact-form').addEventListener('submit', function(event) {
+    window.onload = function () {
+        document.getElementById('contact-form').addEventListener('submit', function (event) {
             event.preventDefault();
+            const btn = document.querySelector("#form-submit") 
+            const email_result = document.querySelector("#email-result")
+            btn.ariaBusy = true
             // these IDs from the previous steps
-            emailjs.sendForm('contact_service', 'contact_form', this)
+            emailjs.sendForm('service_fmc8dck', 'template_gw2mdzv', this)
                 .then(() => {
-                    console.log('SUCCESS!');
+                    email_result.querySelector("main").innerHTML = "<h1><i class=\"icon-warning-circle-light\"></i></h1><h2>Ditt meddelande har skickats!</h2><p>Vi hör av oss så fort vi kan.</p>"
+                    openModal(email_result)
+                    this.reset()
                 }, (error) => {
-                    console.log('FAILED...', error);
+                    email_result.querySelector("main").innerHTML = "<h1><i class=\"icon-warning-circle-light\"></i></h1><h2>Fel</h2><p>Ditt meddelande kunde inte skickats!</p>"
+                    openModal(email_result)
+                    console.log('FAILED...', error)
                 });
+            btn.ariaBusy = false
         });
     }
 </script>
+
 
 </head>
 
 <body>
     <template id="alert-template">
         <header id="alert">
-            <details id="messages"><summary role="button"><i class="icon-warning-light"></i> Driftmeddelanden</summary></details>
+            <details id="messages">
+                <summary role="button"><i class="icon-warning-light"></i> Driftmeddelanden</summary>
+            </details>
         </header>
     </template>
     <div id="alert-pos"></div>
@@ -60,9 +69,9 @@
                 <li id="alert-menu-item"></li>
                 <li><a href="/#nyheter" role="button">Nyheter</a></li>
                 
-                <li><a href="/#0-tjanster" role="button">Tjänster</a></li>
+                <li><a href="/#tjanster" role="button">Tjänster</a></li>
                 
-                <li><a href="/#1-priser" role="button">Priser</a></li>
+                <li><a href="/#priser" role="button">Priser</a></li>
                 
                 <li><a href="/#kontakt" role="button">Kontakt</a></li>
             </ul>
@@ -72,7 +81,7 @@
 <div id="hero">
     <div>
         
-        <img src="logo_inv.png"/>
+        <img src="logo_inv.png" />
         
         <h2 id="vi-levererar-palitlig-energi-med-fokus-pa-kvalitet-miljo-och-lokal-utveckling">Vi levererar pålitlig energi med fokus på kvalitet, miljö och lokal utveckling</h2>
 
@@ -91,91 +100,22 @@
 <p>Layouten är baserad på <a rel="external" href="https://picocss.com">pico</a>.</p>
 
     <hr />
-    <div class="grid">
-        
-         
-        <article style="height: fit-content">
-            <header>
-                <h2>
-                    <a href="https://jomiq.github.io/nyheter/alla-ar-tillbaka//#alla-ar-tillbaka">
-                        Alla är tillbaka
-                    </a>
-                </h2>
-            </header>
-            <main>
-                
-                
-                <p>Det är ingen som har råd att slappa längre.</p>
-
-                
-            </main>
-            <footer><small>2026-03-13</small></footer>
-            </article>
-            
-            
-         
-        <article style="height: fit-content">
-            <header>
-                <h2>
-                    <a href="https://jomiq.github.io/nyheter/alla-har-tagit-ledigt//#alla-har-tagit-ledigt">
-                        Alla har tagit ledigt
-                    </a>
-                </h2>
-            </header>
-            <main>
-                
-                
-                <p>Det är ingen som ids jobba längre.</p>
-
-                
-            </main>
-            <footer><small>2026-02-13</small></footer>
-            </article>
-            
-            
-         
-        <article style="height: fit-content">
-            <header>
-                <h2>
-                    <a href="https://jomiq.github.io/nyheter/en-igelkott//#en-igelkott">
-                        En igelkott!
-                    </a>
-                </h2>
-            </header>
-            <main>
-                
-                <img src="https://images.unsplash.com/photo-1568431477192-52bb13a55088?w=500&amp;auto=format&amp;fit=crop&amp;q=60&amp;ixlib=rb-4.1.0&amp;ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8aGVkZ2Vob2d8ZW58MHx8MHx8fDA%3D"/>
-                
-                
-                <p>Det var en gång en gång som grusades.</p>
-
-                
-            </main>
-            <footer><small>2021-02-13</small></footer>
-            </article>
-            
-            
-        
-            
-    </div>
-    <hr/>
-    <group><a role="button"><i class="status-indicator icon-warning-light"></i>Se aktuell driftinformation här</a>
-        
-        <a href="/nyheter" role="button">Äldre nyheter</a>
+    
+    <group><a href="/status" role="button"><i class="status-indicator icon-warning-light"></i>Se aktuell driftinformation här</a>
         
     </group>
 </section>
 
 </section>
 
-<section id="0-tjanster">
+<section id="tjanster">
     <h1>Tjänster</h1>
-    <p><img src="/icons/fire.svg" alt="" /></p>
+    <h1 id=""><img src="/icons/fire.svg" alt="" /></h1>
 <h2 id="varme">Värme</h2>
 <p>Varje år levererar vi ca <strong>154 000 TWh</strong> värme till drygt 500 hushåll och företag i Jokkmokks kommun.</p>
 <p>Större delen av vår värmeproduktion kommer från egentillverkad träflis, men vi använder även träpellets och olja.</p>
 <hr>
-<p><img src="/icons/tool.svg" alt="" /></p>
+<h1 id="-1"><img src="/icons/tool.svg" alt="" /></h1>
 <h2 id="service">Service</h2>
 <p>Jokkmokks Energi har kunnig personal som gärna hjälper till att felsöka, reparera och optimera din fjärrvärmeanläggning.</p>
 <p><strong>Vi har de flesta reservdelar i lager!</strong></p>
@@ -188,11 +128,11 @@
 <p><img src="/icons/connect.svg" alt="" /></p>
 <h2 id="anslut-dig">Anslut dig</h2>
 <p>Vill du ansluta din fastighet till oss?</p>
-<p>Att ansluta din fastighet till fjärrvärmenätet är enkelt, <a href="/sidor/nyanslutning">läs mer här</a> eller <a href="/#kontakt">kontakta oss</a> så berättar vi mer!</p>
+<p>Att ansluta din fastighet till fjärrvärmenätet är enkelt, <a href="/nyanslutning">läs mer här</a> eller <a href="/#kontakt">kontakta oss</a> så berättar vi mer!</p>
 
 </section>
 
-<section id="1-priser">
+<section id="priser">
     <h1>Priser</h1>
     <h2 id="fjarrvarme">Fjärrvärme</h2>
 <p>Taxan för fjärrvärme är <strong>0,91 kr/kWh</strong> plus en fast årsavgift enligt följande tabell:</p>
@@ -221,8 +161,8 @@
             <p>Industivägen 27, Jokkmokk</p>
         </div>
         <div>
-        <h2>Telefon</h2>
-        <p>070-123 45 67</p>
+            <h2>Telefon</h2>
+            <p>0971-17338</p>
         </div>
         <div>
 
@@ -232,34 +172,41 @@
     </div>
     <hr />
     <h2>Kontaktformulär</h2>
-    <form id="contact-form">
-        <fieldset>
-            <label>
-                Namn
-                <input name="first_name" placeholder="Namn" autocomplete="given-name" />
-            </label>
-            <label>
-                Email
-                <input type="email" name="email" placeholder="Email" autocomplete="email" />
-            </label>
-            <label>
-                Meddelande
-                <textarea name="message" placeholder="Meddelande" aria-label="message"></textarea>
-            </label>
-        </fieldset>
-        <input type="submit" value="Skicka" />
-    </form>
-        <dialog id="email-result">
-        <article>
-            <h1>Hey</h1>
-            <footer><button data-target="email-confirm" onclick="toggleModal(event)">OK</button></footer>
-        </article>
-    </dialog>
+    
+<form id="contact-form">
+    <fieldset>
+        <input type="hidden" name="subject" value="Kontaktformulär" />
+        <label>
+            Namn
+            <input name="name" placeholder="Namn" autocomplete="given-name" required="true" />
+        </label>
+        <label>
+            Email
+            <input type="email" name="email" placeholder="Email" autocomplete="email" required="true" />
+        </label>
+        <label>
+            Meddelande
+            <textarea name="message" placeholder="Meddelande" aria-label="message" required="true" ></textarea>
+        </label>
+    </fieldset>
+    <input id="form-submit" type="submit" value="Skicka" />
+</form>
+<div id="form-submit"></div>
+<dialog id="email-result">
+    <article>
+        <main></main>
+        <button data-target="email-confirm" onclick="closeModal(visibleModal)">OK</button>
+    </article>
+</dialog>
+
 </section>
 
+        
+        
         <div class="float-bottom">
-            <a href="#alert" id="alert-button" class="floating-button" role="link" data-tooltip="Driftmeddelanden" data-placement="left">
-                <i class="icon-warning-light"></i> 
+            <a href="#alert" id="alert-button" class="floating-button" role="link" data-tooltip="Driftmeddelanden"
+                data-placement="left">
+                <i class="icon-warning-light"></i>
             </a>
             <a href="#start" id="top-button" class="floating-button" data-tooltip="Till topps!" data-placement="left">
                 <i class="icon-angle-double-up"></i>
@@ -267,11 +214,13 @@
         </div>
     </main>
     <footer>
-        <small>&copy; Jokkmokks Energi AB 2026</small>
-        | <a href="/status"><small id="footer-status" aria-busy="true"></small></a>
+        <small>&copy; Jokkmokks Energi AB 2026</small> | <small>Industivägen 27, Jokkmokk</small> |
+        <small>0971-17338</small> |
+        <small><a href="mailto:info@jokkmokksenergi.se">info@jokkmokksenergi.se</a></small> |
+        <a href="/status"><small id="footer-status" aria-busy="true"></small></a> 
 
     </footer>
-    <!-- <script>main()</script> -->
+    <script>servicealert_main()</script>
 
 </body>
 

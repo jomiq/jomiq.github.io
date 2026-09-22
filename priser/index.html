@@ -8,21 +8,20 @@
     <title>
 Priser - 
  Jokkmokks Energi AB</title>
+    <link rel="icon" type="image/png" href="/favicon.png">
     <link rel="stylesheet" href="/style.css" />
-    <link
-      rel="stylesheet"
-      type="text/css"
-      href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.2/src/light/style.css"
-    />
     <script src="/serviceAlert.js"></script>
     
-    
+
+
 </head>
 
 <body>
     <template id="alert-template">
         <header id="alert">
-            <details id="messages"><summary role="button"><i class="icon-warning-light"></i> Driftmeddelanden</summary></details>
+            <details id="messages">
+                <summary role="button"><i class="icon-warning-light"></i> Driftmeddelanden</summary>
+            </details>
         </header>
     </template>
     <div id="alert-pos"></div>
@@ -38,9 +37,9 @@ Priser -
                 <li id="alert-menu-item"></li>
                 <li><a href="/#nyheter" role="button">Nyheter</a></li>
                 
-                <li><a href="/#0-tjanster" role="button">Tjänster</a></li>
+                <li><a href="/#tjanster" role="button">Tjänster</a></li>
                 
-                <li><a href="/#1-priser" role="button">Priser</a></li>
+                <li><a href="/#priser" role="button">Priser</a></li>
                 
                 <li><a href="/#kontakt" role="button">Kontakt</a></li>
             </ul>
@@ -51,7 +50,8 @@ Priser -
     <main id="content" style="text-align: center;">
         
 <section>
-    <h2 id="fjarrvarme">Fjärrvärme</h2>
+    <div style="text-align: left;">    
+        <h2 id="fjarrvarme">Fjärrvärme</h2>
 <p>Taxan för fjärrvärme är <strong>0,91 kr/kWh</strong> plus en fast årsavgift enligt följande tabell:</p>
 <table><thead><tr><th>#</th><th>Årsförbrukning (kWh)</th><th>Årsavgift</th></tr></thead><tbody>
 <tr><td>1</td><td>upp till 16000</td><td>5 179 kr</td></tr>
@@ -68,12 +68,17 @@ Priser -
 <h2 id="anslutning">Anslutning</h2>
 <p>Anslutningsavgiften är <strong>120 000 kr</strong>. I detta ingår grävning fram till tomtgränsen men inte fjärrvärmecenttral eller en cool t-shirt.</p>
 
+    </div>
     <hr />
 </section>
 
+
+        
+        
         <div class="float-bottom">
-            <a href="#alert" id="alert-button" class="floating-button" role="link" data-tooltip="Driftmeddelanden" data-placement="left">
-                <i class="icon-warning-light"></i> 
+            <a href="#alert" id="alert-button" class="floating-button" role="link" data-tooltip="Driftmeddelanden"
+                data-placement="left">
+                <i class="icon-warning-light"></i>
             </a>
             <a href="#start" id="top-button" class="floating-button" data-tooltip="Till topps!" data-placement="left">
                 <i class="icon-angle-double-up"></i>
@@ -81,11 +86,13 @@ Priser -
         </div>
     </main>
     <footer>
-        <small>&copy; Jokkmokks Energi AB 2026</small>
-        | <a href="/status"><small id="footer-status" aria-busy="true"></small></a>
+        <small>&copy; Jokkmokks Energi AB 2026</small> | <small>Industivägen 27, Jokkmokk</small> |
+        <small>0971-17338</small> |
+        <small><a href="mailto:info@jokkmokksenergi.se">info@jokkmokksenergi.se</a></small> |
+        <a href="/status"><small id="footer-status" aria-busy="true"></small></a> 
 
     </footer>
-    <!-- <script>main()</script> -->
+    <script>servicealert_main()</script>
 
 </body>
 
