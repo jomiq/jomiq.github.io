@@ -30,7 +30,7 @@
             const email_result = document.querySelector("#email-result")
             btn.ariaBusy = true
             // these IDs from the previous steps
-            emailjs.sendForm('service_fmc8dck', 'template_gw2mdzv', this)
+            emailjs.sendForm('service_sd33v5q', 'template_gw2mdzv', this)
                 .then(() => {
                     email_result.querySelector("main").innerHTML = "<h1><i class=\"icon-warning-circle-light\"></i></h1><h2>Ditt meddelande har skickats!</h2><p>Vi hör av oss så fort vi kan.</p>"
                     openModal(email_result)

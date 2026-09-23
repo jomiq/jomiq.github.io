@@ -33,7 +33,7 @@ TEST -
             const email_result = document.querySelector("#email-result")
             btn.ariaBusy = true
             // these IDs from the previous steps
-            emailjs.sendForm('service_fmc8dck', 'template_gw2mdzv', this)
+            emailjs.sendForm('service_sd33v5q', 'template_gw2mdzv', this)
                 .then(() => {
                     email_result.querySelector("main").innerHTML = "<h1><i class=\"icon-warning-circle-light\"></i></h1><h2>Ditt meddelande har skickats!</h2><p>Vi hör av oss så fort vi kan.</p>"
                     openModal(email_result)
@@ -89,12 +89,12 @@ TEST -
     <div style="text-align: left;">    
         <h1 id="test">Test</h1>
 <div class="grid" style="z-index: 999; position: fixed; right: 1rem; top: 1rem; grid-template-columns: 1fr">
-<button onclick="servicealert_main()" >M</button>
-<button onclick="servicealert_main('/test.json')">1</button>
-<button onclick="servicealert_main('/test_all_normal.json')">2</button>
-<button onclick="servicealert_main('/test_all_normal.json')">3</button>
-<button onclick="servicealert_main('/test_critical.json')">4</button>
-<button onclick="servicealert_main('/empty.json')">0</button>
+<button onclick="servicealert_main()" >Main</button>
+<button onclick="servicealert_main('/test.json')">Test</button>
+<button onclick="servicealert_main('/test_all_normal.json')">Normal</button>
+<button onclick="servicealert_main('/test_all_normal.json')">All Normal</button>
+<button onclick="servicealert_main('/test_critical.json')">Critical</button>
+<button onclick="servicealert_main('/empty.json')">Clear</button>
 </div>
     </div>
     <hr />
